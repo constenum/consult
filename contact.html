@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stenum</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+    if (!window.jQuery) {
+        document.write('<script src="js/jquery-3.2.0.min.js"><\/script>');
+    }
+    </script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/components/datepicker.js"></script>
+    <script src="js/components/form-select.js"></script>
+</head>
+
+<body>
+    <!-- uikit navigation -->
+    <nav class="bg-color uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center">
+            <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
+                <img src="img/logo.png" alt="Stenum Logo">
+            </div>
+            <a class="uk-navbar-brand uk-hidden-small" href="index.html">
+                <img class="uk-margin uk-margin-remove" src="img/logo.png" alt="Stenum Logo">
+            </a>
+            <ul class="uk-navbar-nav uk-container-center uk-hidden-small">
+                <li><a href="#"><i class="uk-icon-android"></i> Android</a></li>
+                <li><a href="#"><i class="uk-icon-google"></i> Google</a></li>
+                <li><a href="#"><i class="uk-icon-apple"></i> iOS</a></li>
+                <li><a href="#"><i class="uk-icon-apple"></i> MacOS</a></li>
+                <li><a href="microsoft.html"><i class="uk-icon-windows"></i> Microsoft</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="bg-color .uk-cover-background">
+        <ul class="uk-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="uk-active"><span>Contact</span></li>
+        </ul>
+    </header>
+    <section class="bg-color uk-clearfix">
+        <h1>Contact Us</h1>
+        <hr class="uk-article-divider">
+        <p>Have a question or need support? Let us know, we are here to help!</p>
+        <!-- uikit form -->
+        <form class="uk-form uk-form-horizontal" action="#" method="post">
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="first-name">First Name</label>
+                <div class="uk-form-controls">
+                    <input id="first-name" placeholder="First Name" type="text" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="last-name">Last Name</label>
+                <div class="uk-form-controls">
+                    <input id="last-name" placeholder="Last Name" type="text" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="email">Email</label>
+                <div class="uk-form-controls">
+                    <input id="email" placeholder="Email Address" type="email" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="email">Phone</label>
+                <div class="uk-form-controls">
+                    <input id="phone" placeholder="Telephone Number" type="tel" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="product">Select a product</label>
+                <!-- uk form select -->
+                <div class="uk-button uk-form-select uk-active uk-form-controls" data-uk-form-select="">
+                    <span>Select a Product</span>
+                    <i class="uk-icon-caret-down"></i>
+                    <select id="product">
+                        <option value="win10">Windows 10</option>
+                        <option value="win8">Windows 8/8.1</option>
+                        <option value="win7">Windows 7</option>
+                        <option disabled>─────────</option>
+                        <option value="word">Word</option>
+                        <option value="excel">Excel</option>
+                        <option value="powerpoint">PowerPoint</option>
+                        <option value="access">Access</option>
+                        <option value="outlook">Outlook</option>
+                        <option value="onenote">OneNote</option>
+                        <option disabled>─────────</option>
+                        <option value="winserver">Windows Server</option>
+                        <option value="exchangeserver">Exchange Server</option>
+                        <option value="sqlserver">SQL Server</option>
+                        <option value="sharepoint">SharePoint Server</option>
+                        <option disabled>─────────</option>
+                        <option value="visualstudio">Visual Studio</option>
+                        <option value="dotnet">.NET Framework</option>
+                        <option value="aspnet">ASP.NET</option>
+                        <option value="winsdk">Windows SDK</option>
+                        <option value="silverlight">Silverlight</option>
+                        <option value="azure">Azure</option>
+                    </select>
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="question">Question(s)</label>
+                <div class="uk-form-controls">
+                    <textarea id="question" cols="45" rows="5" placeholder="How can we assist you?"></textarea>
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <span class="uk-form-label">Preferred Contact Method</span>
+                <div class="uk-form-controls uk-form-controls-text">
+                    <label>
+                        <input name="rb-group" type="radio"> Email</label>
+                    &nbsp;&nbsp;
+                    <label>
+                        <input name="rb-group" type="radio"> Telephone</label>
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <label class="uk-form-label" for="email">Preferred Contact Date</label>
+                <div>
+                    <!-- uikit datepicker -->
+                    <input data-uk-datepicker="{format:'MM-DD-YYYY', pos:'bottom'}" type="text">
+                </div>
+            </div>
+            <div class="uk-form-row uk-align-right">
+                <button type="submit" class="uk-button uk-button-primary">Submit</button>
+            </div>
+        </form>
+    </section>
+    <section class="bg-color">
+        <h1 class="uk-text-center">Locations</h1>
+        <!-- matching column height -->
+        <div class="uk-grid uk-grid-match" data-uk-grid-match="{target:'.uk-panel'} uk-text-center">
+            <div class="uk-width-small-1-1 uk-width-medium-1-3">
+                <div class="uk-panel uk-panel-box">
+                    <h2>New York</h2>
+                    <p>
+                        11 Times Square
+                        <br> 7th Floor
+                        <br> New York, NY, 10036
+                    </p>
+                    <p>
+                        (555) 245-2100
+                    </p>
+                </div>
+            </div>
+            <div class="uk-width-small-1-1 uk-width-medium-1-3">
+                <div class="uk-panel uk-panel-box">
+                    <h2>Chicago</h2>
+                    <p>
+                        200 East Randolph Drive
+                        <br>Suite 200
+                        <br> Chicago, IL 60601
+                    </p>
+                    <p>
+                        (555) 920-5600
+                    </p>
+                </div>
+            </div>
+            <div class="uk-width-small-1-1 uk-width-medium-1-3">
+                <div class="uk-panel uk-panel-box">
+                    <h2>Los Angeles</h2>
+                    <p>
+                        13031 W. Jefferson Blvd
+                        <br> Suite 200
+                        <br> Playa Vista, CA 90094
+                    </p>
+                    <p>
+                        (555) 806-7300
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-color">
+        <div class="uk-container uk-container-center uk-text-center">
+            <a href="../index.html"><img src="img/logo.png" alt="Constneum"></a>
+            <ul class="uk-subnav uk-subnav-line uk-flex-center">
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <!-- uikit icon -->
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i> Facbook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/">
+                        <!-- uikit icon -->
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/">
+                        <!-- uikit icon -->
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/">
+                        <!-- uikit icon -->
+                        <i class="fa fa-github-square" aria-hidden="true"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+            <p>&copy; 2017 Mark Miller</p>
+        </div>
+    </footer>
+    <!-- offcanvas navigation -->
+    <div id="offcanvas" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            
+            <ul class="uk-nav uk-nav-offcanvas">
+                <li><h1>Menu</h1></li>
+                <li><a href="#"><i class="uk-icon-android"></i> Android</a></li>
+                <li><a href="#"><i class="uk-icon-google"></i> Google</a></li>
+                <li><a href="#"><i class="uk-icon-apple"></i> iOS</a></li>
+                <li><a href="#"><i class="uk-icon-apple"></i> MacOS</a></li>
+                <li><a href="microsoft.html"><i class="uk-icon-windows"></i> Microsoft</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

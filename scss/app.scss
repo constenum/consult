@@ -1,0 +1,92 @@
+// import variables and mixins
+@import "uikit-variables";
+@import "uikit-mixins";
+/* adjust default variable values */
+$navbar-nav-color: #f5f5f5;
+$navbar-nav-hover-color: #1687cf;
+$breadcrumb-disabled-color: #222222;
+
+/* background and text colors used for alternating sections on all pages */
+$primary-color: #222222;
+$compliment-color: #f5f5f5;
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+/* customize navbar image size (index.html lines 23 and 26) */
+@mixin hook-navbar-content() {
+	img {
+		height: 55%;
+	}
+}
+
+/* customize panel image size (index.html and microsoft.html) */
+@mixin hook-panel-box() {
+	@include padding(10%, 5%, null, 5%);
+}
+
+@mixin hook-panel-misc() {
+    .uk-panel-teaser img {
+        height: 30px;
+    }
+}
+
+/* customize form (contact.html starting on line 50) */
+@mixin hook-form(){
+    @include padding(null, 3%, null, 3%);
+}
+
+@mixin hook-form-horizontal-label() {
+	text-align: left;
+}
+
+@mixin hook-form-stacked-label() {
+	text-align: left;
+}
+
+@mixin hook-button() { 
+	right: 0px;
+}
+
+
+/* alternating section background color used on all pages */
+.bg-color {
+    @include padding(2%, 2%, 2%, 2%);
+}
+
+.bg-color:nth-child(even) {
+    text-align: center;
+}
+
+.bg-color:nth-child(odd) {
+    text-align: center;
+    background-color: $primary-color;
+    color: $compliment-color;
+}
+
+.bg-color:first-child {
+    height: 50px;
+    @include padding(10px, null, null, null);
+}
+
+/* footer custom styling used on all pages */
+footer {
+    @include padding(50px, 0, 50px, 0);
+}
+
+footer img {
+    width: 25%;
+}
+
+// import uikit core
+@import "uikit";
+// import font awesome
+@import "font-awesome/font-awesome";
+// component files
+// for example: @import "components/slider";
+@import "components/form-select";
+@import "components/datepicker";
